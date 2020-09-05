@@ -1,7 +1,7 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, View, Button } from "react-native";
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
   return (
     <View style={{ alignItems: "center", justifyContent: "center", flex: 1 }}>
       <Text
@@ -13,6 +13,7 @@ export default function HomeScreen() {
       >
         Game still to be designed!
       </Text>
+      <Button title="Go to Home" onPress={() => navigation.goBack()} />
     </View>
   );
 }
